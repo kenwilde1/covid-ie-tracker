@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Montserrat:wght@100;300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
+  height: 15vh;
+  background: #0d2461;
+  border-bottom: 5px solid #d98d00;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.search h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input-div {
+  display: flex;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.date-input {
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-button {
+  cursor: pointer;
+  padding: 10px;
+  background: #d98d00;
+  color: white;
+  border: 2px solid #8f5d00;
+  outline: none;
+  border-radius: 5px;
+}
+
+.search-button:hover {
+  background: #f2a81f;
+  border: 2px solid #d98d00;
+}
+
+.main {
+  background: whitesmoke;
+  height: 84vh;
+}
+
+.covid-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 100px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.covid-data-container h1 {
+  padding-bottom: 20px;
+}
+
+.covid-data-container p {
+  font-size: 2rem;
+}
+
+@media (max-width: 800px) {
+  .search h1 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .date-input {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .covid-data-container h1 {
+    font-size: 1.5rem;
+  }
+  .covid-data-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .search h1 {
+    font-size: 1.5rem;
+  }
+  .covid-data-container h1 {
+    font-size: 1.2rem;
+  }
+  .covid-data-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .date-input {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+  .search h1 {
+    font-size: 1.3rem;
+  }
+  .covid-data-container h1 {
+    font-size: 1rem;
+  }
+  .covid-data-container p {
+    font-size: 0.8rem;
   }
 }
